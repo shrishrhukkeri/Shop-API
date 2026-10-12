@@ -14,9 +14,9 @@ def shipping_cost(weight_kg: float, express: bool = False) -> float:
     >>> shipping_cost(2.5, express=True)
     16.49
     """
-    if weight_kg < 1:
+    if weight_kg <= 1:
         cost = 4.99
-    elif weight_kg < 5:
+    elif weight_kg <= 5:
         cost = 8.99
     else:
         cost = 14.99
